@@ -1,0 +1,103 @@
+
+
+
+body{
+    background-color:hsl(225, 100%, 94%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container{
+    justify-content: center;
+    align-items: center;
+    color: rgb(92, 92, 133);
+    margin: 1rem;
+    
+}
+
+
+.order{
+    width: 300px;
+    height: 470px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    
+    
+    
+}
+
+#pics{
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.summary{
+    text-align: center;
+}
+
+.summary h1{
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.summary p{
+    font-size: smaller;
+    margin: 25px;
+}
+
+.music img{
+    width: 30px;
+    height: 30px;
+    margin: 10px 25px 0 5px;
+}
+
+.music{
+    margin: 25px;
+    height: 50px;
+    border: 0px solid;
+    display: flex;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    
+}
+
+#change {
+    margin:10px 0px 0 50px;  
+ 
+}
+
+#annual{
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+.year{
+    font-weight: lighter;
+    font-size: small;
+}
+
+.proceed{
+    background: blue;
+    display: block;
+    color: aliceblue;
+    border-radius: 10px;
+    padding-left:60px;
+    text-decoration: none;
+    margin: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cancel{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 25px 0 100px;
+}
+
+.change{
+    color: blue;
+}
+
