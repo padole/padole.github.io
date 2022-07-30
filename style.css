@@ -6,6 +6,7 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
+    margin: 15rem;
 }
 
 .container{
