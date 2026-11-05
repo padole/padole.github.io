@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://padole.github.io/sitemap.xml

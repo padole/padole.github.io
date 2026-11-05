@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Peter Adole | IT Infrastructure, Network & Security, Software Developer</title>
+    <meta
+      name="description"
+      content="Peter Adole is an IT professional specialising in IT infrastructure, systems and network administration, cybersecurity, Microsoft 365 and software development with Python, Flask and JavaScript."
+    />
+    <meta name="author" content="Peter Adole" />
+    <meta name="theme-color" content="#0a1428" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f4f7fc" media="(prefers-color-scheme: light)" />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Peter Adole | IT Infrastructure & Software Development" />
+    <meta
+      property="og:description"
+      content="Systems and network administration, cybersecurity, Microsoft 365, and web applications built with Python, Flask and JavaScript."
+    />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Peter Adole | IT Infrastructure & Software Development" />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og-image.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap"
+    />
+
+    <!-- Apply saved theme before paint to avoid a flash -->
+    <script>
+      (function () {
+        try {
+          // Dark by default; visitors can switch to light and the choice is remembered
+          var t = localStorage.getItem('theme') || 'dark'
+          document.documentElement.classList.toggle('dark', t === 'dark')
+        } catch (e) {}
+      })()
+    </script>
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Peter Adole",
+        "jobTitle": "IT Professional & Software Developer",
+        "url": "%VITE_SITE_URL%/",
+        "knowsAbout": [
+          "IT Infrastructure", "Windows Server", "Active Directory", "Microsoft 365",
+          "Network Administration", "Cybersecurity", "Sophos Firewall", "UniFi",
+          "Python", "Flask", "MySQL", "JavaScript", "Web Development"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p style="padding:24px;font-family:sans-serif">
+        Peter Adole — IT infrastructure, network administration, cybersecurity, Microsoft 365 and software development.
+        Please enable JavaScript to view the full portfolio.
+      </p>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

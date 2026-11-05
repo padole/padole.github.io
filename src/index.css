@@ -1,0 +1,201 @@
+@import 'tailwindcss';
+
+/* Dark mode follows the `dark` class on <html> (set by the theme toggle). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── Theme tokens ─────────────────────────────────────────────────────────── */
+:root {
+  --bg: #f4f7fc;
+  --bg-raised: #ffffff;
+  --bg-sunken: #e9eef8;
+  --line: #d5deee;
+  --line-strong: #b9c6de;
+  --ink: #0a1428;
+  --ink-soft: #33415c;
+  --muted: #5b6b88;
+  --accent: #1d5fe0;
+  --accent-strong: #1449b8;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(29, 95, 224, 0.09);
+  --glow: rgba(29, 95, 224, 0.18);
+  --ok: #0f8a5f;
+  --accent-2: #0891b2;
+  --accent-3: #7c3aed;
+  --aurora-1: rgba(29, 95, 224, 0.20);
+  --aurora-2: rgba(8, 145, 178, 0.16);
+  --aurora-3: rgba(124, 58, 237, 0.13);
+  --glass: rgba(255, 255, 255, 0.62);
+  --glass-line: rgba(10, 20, 40, 0.08);
+}
+
+.dark {
+  --bg: #0a1428;
+  --bg-raised: #0f1d38;
+  --bg-sunken: #071021;
+  --line: #1c2c4c;
+  --line-strong: #2a3f68;
+  --ink: #e8eefa;
+  --ink-soft: #c2cde3;
+  --muted: #8797b6;
+  --accent: #3d8bff;
+  --accent-strong: #6aa6ff;
+  --accent-ink: #04101f;
+  --accent-soft: rgba(61, 139, 255, 0.12);
+  --glow: rgba(61, 139, 255, 0.35);
+  --ok: #34d39a;
+  --accent-2: #22d3ee;
+  --accent-3: #a78bfa;
+  --aurora-1: rgba(61, 139, 255, 0.30);
+  --aurora-2: rgba(34, 211, 238, 0.16);
+  --aurora-3: rgba(167, 139, 250, 0.20);
+  --glass: rgba(15, 29, 56, 0.55);
+  --glass-line: rgba(232, 238, 250, 0.09);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-raised: var(--bg-raised);
+  --color-sunken: var(--bg-sunken);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-ok: var(--ok);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--accent); color: var(--accent-ink); }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+/* Light pooling behind the portrait, with a cooler wash on the left */
+.spotlight {
+  background:
+    radial-gradient(38rem 32rem at 78% 42%, var(--aurora-1), transparent 70%),
+    radial-gradient(30rem 26rem at 92% 88%, var(--aurora-3), transparent 70%),
+    radial-gradient(34rem 28rem at 4% 18%, var(--aurora-2), transparent 70%);
+}
+.dot-field {
+  background-image: radial-gradient(var(--line-strong) 1px, transparent 1.4px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 50% 60% at 78% 45%, #000 10%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 60% at 78% 45%, #000 10%, transparent 70%);
+  opacity: 0.5;
+}
+.grain {
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Frosted surfaces */
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.06) inset, 0 18px 40px -24px rgba(4, 16, 31, 0.45);
+}
+
+/* Serif italic accent inside the headline */
+.text-serif-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  padding-right: 0.06em;
+  background: linear-gradient(100deg, var(--accent), var(--accent-2) 50%, var(--accent-3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.link-underline {
+  background: linear-gradient(90deg, var(--accent), var(--accent-3)) left bottom / 100% 2px no-repeat;
+  padding-bottom: 3px;
+  transition: background-size 0.3s ease, color 0.2s ease;
+}
+.link-underline:hover { background-size: 35% 2px; color: var(--accent); }
+
+.spin-slow { animation: spin 18s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.float-slow { animation: float 7s ease-in-out infinite; }
+@keyframes float { 50% { transform: translateY(-8px); } }
+
+/* Tech stack strip */
+.marquee {
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.marquee-track { animation: marquee 40s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(calc(-50% - 1.25rem)); } }
+
+/* Load-in sequence for the hero only */
+.hero-in > * {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+.hero-in > *:nth-child(2) { animation-delay: 0.08s; }
+.hero-in > *:nth-child(3) { animation-delay: 0.16s; }
+.hero-in > *:nth-child(4) { animation-delay: 0.24s; }
+.hero-in > *:nth-child(5) { animation-delay: 0.32s; }
+.hero-in > *:nth-child(6) { animation-delay: 0.4s; }
+.hero-in-late {
+  opacity: 0;
+  animation: rise 1s 0.25s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  transform: translateY(10px) scale(0.98);
+}
+@keyframes rise {
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .marquee-track, .spin-slow { animation: none !important; }
+}
