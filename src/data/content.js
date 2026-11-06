@@ -14,15 +14,15 @@ export const profile = {
   name: 'Peter Adole',
   role: 'IT Infrastructure Professional and Software Developer',
   shortRole: 'IT Professional & Software Developer',
-  location: '[City, Country]',
+  location: 'Lagos, Nigeria',
   availability: 'Open to full-time roles and consulting work',
   email: 'inas4wealth@gmail.com',
   // Portrait in /public as profile.jpg (4:5, e.g. 800×1000; face in the upper third).
   // If it is missing, an initials monogram is shown automatically.
   photo: '/profile.jpg',
   social: {
-    linkedin: 'https://www.linkedin.com/in/[your-linkedin-handle]',
-    github: 'https://github.com/[your-github-username]',
+    linkedin: 'https://www.linkedin.com/in/adolepeter',
+    github: 'https://github.com/padole',
   },
 }
 
