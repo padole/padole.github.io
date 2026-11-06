@@ -16,12 +16,10 @@ export const profile = {
   shortRole: 'IT Professional & Software Developer',
   location: '[City, Country]',
   availability: 'Open to full-time roles and consulting work',
-  email: '[your.email@example.com]',
+  email: 'inas4wealth@gmail.com',
   // Portrait in /public as profile.jpg (4:5, e.g. 800×1000; face in the upper third).
   // If it is missing, an initials monogram is shown automatically.
   photo: '/profile.jpg',
-  // Put your CV in /public with this exact file name.
-  cv: '/Peter-Adole-CV.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/[your-linkedin-handle]',
     github: 'https://github.com/[your-github-username]',
@@ -46,7 +44,7 @@ export const about = {
   paragraphs: [
     'I work at the point where infrastructure meets the people who rely on it. My day-to-day spans Windows Server and Active Directory, Microsoft 365 administration, network and firewall management with Sophos and UniFi, and keeping users productive and secure.',
     'Alongside operations, I build software. Many IT problems are process problems — access requests in email threads, support tickets in spreadsheets — so I write web applications in Python, Flask, MySQL and JavaScript that turn those processes into clear, trackable workflows.',
-    '[Add a sentence about your experience: years in IT, the kinds of organisations you have supported, or the size of environments you manage.]',
+    'Most recently I have been building internal systems for LADOL, the Lagos Deep Offshore Logistics Base — site access, material movement approvals, attendance registers and staff dining — replacing paper forms and email chains with auditable digital workflows, alongside websites and online ordering platforms for other businesses.',
   ],
   goals:
     'I am growing toward roles that combine infrastructure and security ownership with software development: designing reliable systems, automating the routine, and building internal tools that teams actually use.',

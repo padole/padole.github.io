@@ -37,7 +37,6 @@ The site is built so that placeholders never become broken links: a LinkedIn, Gi
 | What | Where |
 | --- | --- |
 | Profile photo | `public/profile.jpg` — a 4:5 portrait (e.g. 800×1000) with your face in the upper third. Done; replace it any time. |
-| CV | Replace `public/Peter-Adole-CV.pdf` with your real CV, same file name. The current file is a placeholder. |
 | Email, location, LinkedIn, GitHub | `profile` in `content.js` |
 | About paragraph on your experience | `about.paragraphs` (third item) |
 | Project links | `github` and `demo` on each project (use `''` to hide a button) |
@@ -140,7 +139,7 @@ All three hosts let you attach a domain (for example `peteradole.com`) from thei
 
 ```
 index.html                SEO meta tags, social preview, structured data, theme bootstrap
-public/                   favicon, social image, CV, robots.txt, sitemap.xml (+ your photo)
+public/                   favicon, social image, robots.txt, sitemap.xml (+ your photo)
 src/
   data/content.js         ← all text, links and lists
   index.css               theme colours (dark + light), fonts, animations

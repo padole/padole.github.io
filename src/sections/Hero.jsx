@@ -1,4 +1,4 @@
-import { ArrowRight, Download, MapPin } from 'lucide-react'
+import { ArrowRight, MapPin } from 'lucide-react'
 import { about, hero, profile } from '../data/content'
 import { Portrait } from '../components/Portrait'
 import { GithubIcon, LinkedinIcon } from '../components/BrandIcons'
@@ -80,14 +80,6 @@ export function Hero() {
             </a>
             <a href="#contact" className="link-underline font-semibold text-ink">
               Let’s talk
-            </a>
-            <a
-              href={profile.cv}
-              download="Peter-Adole-CV.pdf"
-              className="inline-flex items-center gap-2 font-medium text-muted transition-colors hover:text-accent"
-            >
-              <Download size={17} aria-hidden="true" />
-              Download CV
             </a>
             {socials.map(({ href, label, Icon }) => (
               <a
