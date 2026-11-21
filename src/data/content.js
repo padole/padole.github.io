@@ -131,7 +131,7 @@ export const projects = [
     art: 'web',
     image: '/projects/diptouch-website.jpg',
     github: 'https://github.com/padole/diptouch-website',
-    demo: '',
+    demo: 'https://diptouchcleaning.com',
   },
   {
     title: 'LADOL Material Form',
