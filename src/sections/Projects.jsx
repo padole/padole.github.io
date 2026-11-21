@@ -96,7 +96,7 @@ export function Projects() {
       id="projects"
       wide
       title="Projects"
-      intro="Web applications I have designed and built end to end, from database and API to the interface people use: site access, approvals, ticketing, staff dining, attendance and online ordering."
+      intro="Web applications I have designed and built end to end, from database and API to the interface people use: site access, approvals, ticketing, staff dining, attendance, online ordering and business websites."
     >
       <div className="-mt-2 mb-8 flex flex-wrap gap-2" role="group" aria-label="Filter projects by category">
         {categories.map((c) => (

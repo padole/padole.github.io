@@ -31,7 +31,7 @@ export const hero = {
   // Part of the headline drawn in the gradient accent (must appear in `headline` exactly)
   highlight: 'secure and running',
   // Card beside the portrait, linking to the Projects section
-  latest: { title: 'LADOL Meal Ticketing', detail: 'React · Flask · MySQL' },
+  latest: { title: 'Diptouch Cleaning Services', detail: 'React · Vite' },
   // Text running around the spinning badge
   badge: 'Infrastructure · Security · Software · ',
   // Scrolling strip under the hero
@@ -121,6 +121,17 @@ export const projects = [
     github: '',
     demo: '',
     featured: true,
+  },
+  {
+    title: 'Diptouch Cleaning Services',
+    category: 'Web development',
+    description:
+      'A marketing website for a Lagos cleaning company covering post-construction, move-in, deep, office and shortlet cleaning. A drag-to-compare before-and-after slider and video Reels show real jobs, and a validated quote form sends enquiries straight to WhatsApp, with a floating WhatsApp button on phones.',
+    stack: ['React', 'Vite', 'JavaScript', 'CSS'],
+    art: 'web',
+    image: '/projects/diptouch-website.jpg',
+    github: 'https://github.com/padole/diptouch-website',
+    demo: '',
   },
   {
     title: 'LADOL Material Form',
